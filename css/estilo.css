@@ -1,3 +1,7 @@
+.animacion, .animacionImg {
+  animation-name: animacion;
+  animation-timing-function: infiniti; }
+
 @keyframes animacion {
   0% {
     transform: scale(0.2, 0.2); }
@@ -11,8 +15,6 @@
     transform: scale(1, 1); } }
 
 .animacionImg {
-  animation-name: animacion;
-  animation-timing-function: infiniti;
   animation-duration: 2s; }
 
 a img {
@@ -23,6 +25,7 @@ a img {
 h1 {
   color: black;
   padding: 5px;
+  position: center;
   transition: color 3s , padding 2s; }
   h1:hover {
     color: blueviolet;
@@ -56,3 +59,8 @@ img {
 
 a {
   font-size: 20px; }
+
+@media screen and (max-width: 760px) {
+  .logo img {
+    width: 60px;
+    height: 60px; } }

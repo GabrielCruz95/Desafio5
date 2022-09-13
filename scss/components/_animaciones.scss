@@ -7,11 +7,8 @@
     100%{transform: scale(1,1);}
 }
 .animacionImg{
-    animation: {
-        name: animacion;
-        timing-function: infiniti;
-        duration: 2s;
-    }
+    @extend .animacion;
+    animation-duration: 2s;
 }
 //Movimiento al pasar sobre logo
 a{
@@ -24,8 +21,9 @@ a{
 }
 //Movimiento del titulo
 h1{
-    color:$colorNegro;
-    padding: 5px;
+    color:map-get($estilos,color);
+    padding:map-get($estilos,pading);
+    position:map-get($estilos,position);
     transition: color 3s , padding 2s;
 
     &:hover{
